@@ -1,6 +1,6 @@
 # Photography Site
 
-[x] Home page
+- Home page
 
 
 ## Skills : Html Css Javascript
