@@ -33,3 +33,21 @@ el.forEach((e) => {
     e.querySelector("ul.submenu").classList.toggle("active");
   };
 });
+
+
+/* modal image - gallery page */
+let btnCloseModal = document.querySelector(".btn-close-modal");
+let images = document.querySelectorAll(".gallery-item img");
+const modal = document.querySelector(".modal-image");
+const modalImg = document.querySelector(".modal-image img");
+images.forEach( (img) => {
+  img.addEventListener("click", (e) => {
+    let src = e.currentTarget.attributes['data-img'].value;
+    modal.classList.add("active");
+    modalImg.setAttribute("src", "../images/" + src);
+  });
+});
+btnCloseModal.onclick = () => {
+  modal.classList.remove("active");
+}
+/* modal image - gallery page */

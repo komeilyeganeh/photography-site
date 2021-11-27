@@ -225,6 +225,8 @@ li {
   padding-right: 3rem;
   display: grid;
   grid-template-columns: 50% 50%;
+  border-top: 1px solid #555;
+  padding-top: 1rem;
 }
 
 .footer .container .social-media a {
@@ -417,6 +419,190 @@ li {
 
 /* ---------- albums page ---------- */
 
+
+
+/* ---------- gallery page ---------- */
+.gallery .gallery-box {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.gallery .gallery-box .gallery-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .gallery-box .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+}
+
+.gallery .gallery-box .gallery-item:hover img {
+  transform: scale(1.2);
+}
+/* ---------- gallery page ---------- */
+
+
+/* ---------- modal image ---------- */
+.modal-image{
+  position: fixed;
+  top: 0; right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 10000;
+  visibility: hidden;
+  transition: 0.2s ease-out;
+}
+
+.modal-image.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-image .image{
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image i.fa-times{
+  position: absolute;
+  top: 1%; right: 1%;
+  padding: 10px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.modal-image img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+/* ---------- modal image ---------- */
+
+
+/* ---------- category page ---------- */
+.home-category {
+  min-height: 70vh;
+  background-image: url("../images/page-header-bg-3.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.home-category .layer-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+.home-category .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.home-category .content h2 {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translate(5%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.home-category .content h2::after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: rgb(0, 201, 201);
+  top: 130%;
+  right: 0;
+}
+
+.categories .category-box {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 20px;
+}
+
+.categories .category-box .category-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.categories .category-box .category-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease-out;
+}
+
+.categories .category-box .category-item:hover img {
+  transform: scale(1.2);
+}
+
+.categories .category-box .category-item h3{
+  position: absolute;
+  top: 95%;
+  right: 2%;
+  transform: translate(2%, -95%);
+  color: white;
+  padding: 3px 12px;
+  background-color: black;
+  opacity: 0.8;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.categories .category-box .category-item a.layer-image-cat{
+  position: absolute;
+  top: 0; right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 201, 201);
+  opacity: 0;
+  z-index: 1;
+  transition: 0.2s ease-out;
+  visibility: hidden;
+}
+
+.categories .category-box .category-item:hover a.layer-image-cat{
+  visibility: visible;
+  opacity: 0.8;
+}
+
+
+/* ---------- category page ---------- */
+
+
+
+
+
 /* media queries */
 
 /* < 991px */
@@ -434,6 +620,9 @@ li {
   .home .slider .swiper-slide .content a.btn-1,
   .swiper-slide .content a.btn-2 {
     font-size: 0.9rem;
+  }
+  .categories .category-box .category-item h3{
+    font-size: 1rem;
   }
 }
 
@@ -459,6 +648,9 @@ li {
     top: 70%;
     right: 50%;
     transform: translate(50%, -70%);
+  }
+  .categories .category-box {
+    grid-template-columns: 40% 40% ;
   }
 }
 
@@ -501,5 +693,18 @@ li {
   }
   .home-album .content h2 {
     font-size: 1.6rem;
+  }
+  .gallery .gallery-box {
+    grid-template-columns: auto auto;
+  }
+  .categories .category-box {
+    grid-template-columns: 80%;
+  }
+}
+
+/* < 400px */
+@media (max-width: 400px){
+  .gallery .gallery-box {
+    grid-template-columns: auto;
   }
 }
