@@ -1,9 +1,9 @@
 # Photography Site
 
 - Home page
-- Fix bug menu
 - Album page
 - Categories & gallery pages
+- About & contact pages
 
 
 ## Skills : Html Css Javascript

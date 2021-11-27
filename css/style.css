@@ -595,9 +595,144 @@ li {
   visibility: visible;
   opacity: 0.8;
 }
-
-
 /* ---------- category page ---------- */
+
+/* ---------- about page ---------- */
+.home-about {
+  min-height: 70vh;
+  background-image: url("../images/page-header-bg-20.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.home-about .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.home-about .content h2,
+.content .title-job{
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translate(5%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.home-about .content h2 span{
+  font-size: 2rem;
+  color: rgb(0, 201, 201);
+}
+
+.home-about .content .title-job{
+  top: 62%;
+}
+
+.about-me{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.about-me .content-about{
+  padding: 2rem;
+}
+
+.about-me .content-about h1{
+  font-size: 1.7rem;
+  margin: 1rem 0;
+}
+
+.about-me .content-about span{
+  margin: 1rem 0;
+  color: #555;
+  position: relative;
+}
+
+.about-me .content-about span::after{
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 5px;
+  background-color: rgb(0, 201, 201);
+  top: 130%; right: 0;
+}
+
+.about-me .content-about p{
+  margin-top: 3rem;
+  line-height: 2;
+}
+
+.about-me .image-about{
+  width: 100%;
+}
+
+.about-me .image-about img{
+  max-width: 100%;
+  max-height: 100%;
+}
+/* ---------- about page ---------- */
+
+/* ---------- contact page ---------- */
+.home-contact{
+  width: 100%;
+  min-height: 90vh;
+  background-image: url("../images/contact-bg-2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-contact .info-contact{
+  background-color: white;
+  opacity: 0.9;
+  padding: 2rem 8rem;
+  min-width: 500px;
+}
+
+.home-contact .info-contact h2{
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.home-contact .info-contact h2::after{
+  position: absolute;
+  content: "";
+  top: 130%; right: 0;
+  width: 80px;
+  height: 5px;
+  background-color: rgb(0, 201, 201);
+}
+
+.home-contact .info-contact .item-contact{
+  margin-top: 1rem;
+}
+
+.home-contact .info-contact .item-contact i{
+  font-size: 1.4rem;
+  color: rgb(0, 201, 201);
+}
+
+.home-contact .info-contact .item-contact span{
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.home-contact .info-contact .item-contact.socials{
+  margin-top: 3rem;
+}
+
+.home-contact .info-contact .item-contact.socials a:not(:first-child){
+  margin-right: 1rem;
+}
+/* ---------- contact page ---------- */
+
 
 
 
@@ -623,6 +758,9 @@ li {
   }
   .categories .category-box .category-item h3{
     font-size: 1rem;
+  }
+  .about-me{
+    grid-template-columns: auto;
   }
 }
 
@@ -699,6 +837,13 @@ li {
   }
   .categories .category-box {
     grid-template-columns: 80%;
+  }
+  .home-contact .info-contact h2{
+    font-size: 1.2rem;
+  }
+  .home-contact .info-contact .item-contact span{
+    margin-right: 0.5rem;
+    font-size: 1rem;
   }
 }
 
